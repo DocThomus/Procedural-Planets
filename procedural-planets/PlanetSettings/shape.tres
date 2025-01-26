@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="ShapeSetting" load_steps=2 format=3 uid="uid://cinues46l41uj"]
+[gd_resource type="Resource" script_class="ShapeSetting" load_steps=3 format=3 uid="uid://cinues46l41uj"]
 
 [ext_resource type="Script" path="res://ShapeSetting.cs" id="1_4liuu"]
+[ext_resource type="FastNoiseLite" uid="uid://dlrjx875pg6w6" path="res://PlanetSettings/Noise.tres" id="1_o5ryu"]
 
 [resource]
 script = ExtResource("1_4liuu")
-planetRadius = 3.0
+planetRadius = 1.0
+Noise = ExtResource("1_o5ryu")

@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "G:\\Perso\\Dev\\Procedural Planets\\procedural-planets\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|g:\\perso\\dev\\procedural planets\\procedural-planets\\planet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|solutionrelative:planet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|g:\\perso\\dev\\procedural planets\\procedural-planets\\colorsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|solutionrelative:colorsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|g:\\perso\\dev\\procedural planets\\procedural-planets\\shapegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|solutionrelative:shapegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|g:\\perso\\dev\\procedural planets\\procedural-planets\\shapesetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|solutionrelative:shapesetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|g:\\perso\\dev\\procedural planets\\procedural-planets\\colorsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|solutionrelative:colorsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|g:\\perso\\dev\\procedural planets\\procedural-planets\\terrainface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|solutionrelative:terrainface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|g:\\perso\\dev\\procedural planets\\procedural-planets\\shapegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|solutionrelative:shapegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|g:\\perso\\dev\\procedural planets\\procedural-planets\\planet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6C785B-4292-4AF1-A698-8FB17CB74AF1}|Procedural Planets.csproj|solutionrelative:planet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ShapeGenerator.cs",
               "DocumentMoniker": "G:\\Perso\\Dev\\Procedural Planets\\procedural-planets\\ShapeGenerator.cs",
               "RelativeDocumentMoniker": "ShapeGenerator.cs",
               "ToolTip": "G:\\Perso\\Dev\\Procedural Planets\\procedural-planets\\ShapeGenerator.cs",
               "RelativeToolTip": "ShapeGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-26T11:02:57.731Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ColorSetting.cs",
               "DocumentMoniker": "G:\\Perso\\Dev\\Procedural Planets\\procedural-planets\\ColorSetting.cs",
               "RelativeDocumentMoniker": "ColorSetting.cs",
@@ -60,13 +60,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ShapeSetting.cs",
               "DocumentMoniker": "G:\\Perso\\Dev\\Procedural Planets\\procedural-planets\\ShapeSetting.cs",
               "RelativeDocumentMoniker": "ShapeSetting.cs",
               "ToolTip": "G:\\Perso\\Dev\\Procedural Planets\\procedural-planets\\ShapeSetting.cs",
               "RelativeToolTip": "ShapeSetting.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-26T09:53:00.842Z",
               "EditorCaption": ""
@@ -79,20 +79,20 @@
               "RelativeDocumentMoniker": "TerrainFace.cs",
               "ToolTip": "G:\\Perso\\Dev\\Procedural Planets\\procedural-planets\\TerrainFace.cs",
               "RelativeToolTip": "TerrainFace.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T17:31:02.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Planet.cs",
               "DocumentMoniker": "G:\\Perso\\Dev\\Procedural Planets\\procedural-planets\\Planet.cs",
               "RelativeDocumentMoniker": "Planet.cs",
               "ToolTip": "G:\\Perso\\Dev\\Procedural Planets\\procedural-planets\\Planet.cs",
               "RelativeToolTip": "Planet.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T17:28:17.927Z",
               "EditorCaption": ""

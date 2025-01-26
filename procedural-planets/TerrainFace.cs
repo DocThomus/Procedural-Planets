@@ -27,7 +27,6 @@ public partial class TerrainFace
         Vector3[] vertices = new Vector3[resolution * resolution];
         Vector3[] normals = new Vector3[resolution * resolution];
         int[] triangles = new int[(resolution - 1) * (resolution - 1) * 6];
-        Color[] colors = new Color[resolution * resolution];
         int j = 0;
 
         for (int y = 0; y < resolution; y++)
@@ -59,7 +58,7 @@ public partial class TerrainFace
         surfaceArray.Resize((int)Mesh.ArrayType.Max);
 
         surfaceArray[(int)Mesh.ArrayType.Vertex] = vertices;
-        surfaceArray[(int)Mesh.ArrayType.Normal] = normals; // A tester, pas sûr que la génération soi bonne
+        surfaceArray[(int)Mesh.ArrayType.Normal] = normals;
         surfaceArray[(int)Mesh.ArrayType.Index] = triangles;
 
         mesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, surfaceArray);

@@ -1,4 +1,5 @@
 using Godot;
+using System;
 using System.ComponentModel.DataAnnotations;
 using Range = Godot.Range;
 
@@ -6,7 +7,7 @@ using Range = Godot.Range;
 public partial class Planet : MeshInstance3D
 {
 
-    private int _resolution = 10;
+    private int _resolution = 2;
     [Export, Range(2, 256)]
     public int Resolution
     {
@@ -14,7 +15,7 @@ public partial class Planet : MeshInstance3D
         set { _resolution = value; Run(); }
     }
 
-    private ColorSetting _ColorSetting;
+    private ColorSetting _ColorSetting = GD.Load<ColorSetting>("res://PlanetSettings/Color.tres");
     [Export]
     public ColorSetting ColorSetting
     {
@@ -26,7 +27,7 @@ public partial class Planet : MeshInstance3D
         }
     }
 
-    private ShapeSetting _shapeSetting;
+    private ShapeSetting _shapeSetting = GD.Load<ShapeSetting>("res://PlanetSettings/shape.tres");
     [Export]
     public ShapeSetting shapeSetting
     {
@@ -38,15 +39,19 @@ public partial class Planet : MeshInstance3D
         }
     }
 
+
     TerrainFace[] terrainFaces;
 
     private ShapeGenerator ShapeGenerator;
+
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
 	{
         Run();
     }
+
+   
 
     private void Run()
     {
@@ -72,10 +77,11 @@ public partial class Planet : MeshInstance3D
     private void Initialize()
     {
         ShapeGenerator = new ShapeGenerator(shapeSetting);
+        if (shapeSetting == null) { GD.Print("SS null"); }
 
-        ArrayMesh mesh = new ArrayMesh();
         terrainFaces = new TerrainFace[6];
 
+        ArrayMesh mesh = new ArrayMesh();
         Vector3[] directions = { Vector3.Up, Vector3.Down, Vector3.Left, Vector3.Right, Vector3.Forward, Vector3.Back };
 
         for (int i = 0; i < 6; i++)

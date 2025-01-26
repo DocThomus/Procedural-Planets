@@ -1,5 +1,6 @@
 
 using Godot;
+using System;
 
 [Tool]
 public partial class ShapeGenerator
@@ -13,8 +14,13 @@ public partial class ShapeGenerator
 
     public Vector3 CalculatePointOnPlanet(Vector3 pointOnSphere)
     {
-        if (ShapeSetting == null) return pointOnSphere;
-        return pointOnSphere * ShapeSetting.planetRadius;
+        float elevation = Evaluate(pointOnSphere);
+        return pointOnSphere * ShapeSetting.planetRadius * (1+elevation);
+    }
+
+    public float Evaluate(Vector3 point)
+    {
+        return (ShapeSetting.Noise.GetNoise3Dv(point) + 1) * .5f;
     }
 
 }
