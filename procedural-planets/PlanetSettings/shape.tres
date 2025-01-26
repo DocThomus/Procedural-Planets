@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ShapeSetting" load_steps=2 format=3 uid="uid://cinues46l41uj"]
+
+[ext_resource type="Script" path="res://ShapeSetting.cs" id="1_4liuu"]
+
+[resource]
+script = ExtResource("1_4liuu")
+planetRadius = 2.0

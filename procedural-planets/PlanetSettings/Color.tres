@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ColorSetting" load_steps=2 format=3 uid="uid://cixy0sw4m34a7"]
+
+[ext_resource type="Script" path="res://ColorSetting.cs" id="1_1ofdb"]
+
+[resource]
+script = ExtResource("1_1ofdb")
+planetColor = Color(0.435294, 0.243137, 0.152941, 1)

@@ -8,9 +8,11 @@ public partial class TerrainFace
 	Vector3 normale;
     Vector3 tangentA;
     Vector3 tangentB;
+    ShapeGenerator shapeGenerator;
 
-    public TerrainFace(ArrayMesh mesh, int resolution, Vector3 normale)
+    public TerrainFace(ShapeGenerator shapeGenerator, ArrayMesh mesh, int resolution, Vector3 normale)
     {
+        this.shapeGenerator = shapeGenerator;
         this.mesh = mesh;
         this.resolution = resolution;
         this.normale = normale;
@@ -24,6 +26,7 @@ public partial class TerrainFace
         Vector3[] vertices = new Vector3[resolution * resolution];
         Vector3[] normals = new Vector3[resolution * resolution];
         int[] triangles = new int[(resolution - 1) * (resolution - 1) * 6];
+        Color[] colors = new Color[resolution * resolution];
         int j = 0;
 
         for (int y = 0; y < resolution; y++)
@@ -32,9 +35,10 @@ public partial class TerrainFace
             {
                 int i = x + y * resolution;
                 Vector2 percent = new Vector2(x, y) / (resolution - 1);
-                Vector3 pointOnUnitCube = normale + (percent.X - .5f) * 2 * tangentA + (percent.Y - .5f) * 2 * tangentB;
-                vertices[i] = pointOnUnitCube;
-                normals[i] = pointOnUnitCube.Normalized();
+                Vector3 pointOnCube = normale + (percent.X - .5f) * 2 * tangentA + (percent.Y - .5f) * 2 * tangentB;
+                Vector3 pointOnSphere = pointOnCube.Normalized();
+                vertices[i] = shapeGenerator.CalculatePointOnPlanet(pointOnSphere);
+                normals[i] = pointOnSphere;
 
                 if (x != resolution - 1 && y != resolution - 1)
                 {
