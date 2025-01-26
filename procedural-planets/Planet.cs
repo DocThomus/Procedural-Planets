@@ -1,5 +1,4 @@
 using Godot;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Range = Godot.Range;
 
@@ -15,11 +14,29 @@ public partial class Planet : MeshInstance3D
         set { _resolution = value; Run(); }
     }
 
+    private ColorSetting _ColorSetting;
     [Export]
-    public ColorSetting colorSetting;
+    public ColorSetting ColorSetting
+    {
+        get => _ColorSetting;
+        set
+        {
+            _ColorSetting = value;
+            _ColorSetting.Changed += ColorSetting_Changed;
+        }
+    }
 
+    private ShapeSetting _shapeSetting;
     [Export]
-    public ShapeSetting shapeSetting;
+    public ShapeSetting shapeSetting
+    {
+        get => _shapeSetting;
+        set
+        {
+            _shapeSetting = value;
+            _shapeSetting.Changed += ShapeSetting_Changed;
+        }
+    }
 
     TerrainFace[] terrainFaces;
 
@@ -36,6 +53,20 @@ public partial class Planet : MeshInstance3D
         Initialize();
         GenerateMesh();
         GenerateColor();
+    }
+
+    private void ColorSetting_Changed()
+    {
+        //Initialize();
+        //GenerateColor();
+        Run();
+    }
+
+    private void ShapeSetting_Changed()
+    {
+        //Initialize();
+        //GenerateMesh();
+        Run();
     }
 
     private void Initialize()
@@ -65,15 +96,20 @@ public partial class Planet : MeshInstance3D
 
     private void GenerateColor()
     {
-        for (int i = 0; i < 6; i++)
+        if (ColorSetting != null)
         {
-            StandardMaterial3D material = (StandardMaterial3D)Mesh.SurfaceGetMaterial(i);
-            if (material == null)
+            for (int i = 0; i < 6; i++)
             {
-                material = new StandardMaterial3D();
+                StandardMaterial3D material = (StandardMaterial3D)Mesh.SurfaceGetMaterial(i);
+                if (material == null)
+                {
+                    material = new StandardMaterial3D();
+                }
+
+                material.AlbedoColor = ColorSetting.planetColor;
+            
+                Mesh.SurfaceSetMaterial(i, material);
             }
-            material.AlbedoColor = colorSetting.planetColor;            
-            Mesh.SurfaceSetMaterial(i, material);
         }
     }
 

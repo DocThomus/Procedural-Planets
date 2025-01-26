@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_4liuu")
-planetRadius = 2.0
+planetRadius = 3.0
