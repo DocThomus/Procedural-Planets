@@ -6,4 +6,11 @@
 [resource]
 script = ExtResource("1_4liuu")
 planetRadius = 1.0
+strength = 1.0
+numLayers = 5
+baseRoughness = 1.025
+roughness = 2.03
+persistence = 0.5
+offset = Vector3(0, 0, 0)
+minValue = 1.1
 Noise = ExtResource("1_o5ryu")
