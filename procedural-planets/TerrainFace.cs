@@ -25,7 +25,7 @@ public partial class TerrainFace
     public void ConstructMesh()
     {
         Vector3[] vertices = new Vector3[resolution * resolution];
-        Vector3[] normals = new Vector3[resolution * resolution];
+        //Vector3[] normals = new Vector3[resolution * resolution];
         int[] triangles = new int[(resolution - 1) * (resolution - 1) * 6];
         int j = 0;
 
@@ -38,7 +38,7 @@ public partial class TerrainFace
                 Vector3 pointOnCube = normale + (percent.X - .5f) * 2 * tangentA + (percent.Y - .5f) * 2 * tangentB;
                 Vector3 pointOnSphere = pointOnCube.Normalized();
                 vertices[i] = shapeGenerator.CalculatePointOnPlanet(pointOnSphere);
-                normals[i] = pointOnSphere;
+                //normals[i] = pointOnSphere;
 
                 if (x != resolution - 1 && y != resolution - 1)
                 {
@@ -58,9 +58,15 @@ public partial class TerrainFace
         surfaceArray.Resize((int)Mesh.ArrayType.Max);
 
         surfaceArray[(int)Mesh.ArrayType.Vertex] = vertices;
-        surfaceArray[(int)Mesh.ArrayType.Normal] = normals;
+        //surfaceArray[(int)Mesh.ArrayType.Normal] = normals;
         surfaceArray[(int)Mesh.ArrayType.Index] = triangles;
 
-        mesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, surfaceArray);
+
+        var surface_tool = new SurfaceTool();
+
+        surface_tool.CreateFromArrays(surfaceArray);
+        surface_tool.GenerateNormals();
+
+        mesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, surface_tool.CommitToArrays());
     }
 }

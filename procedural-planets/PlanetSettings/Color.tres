@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_1ofdb")
-planetColor = Color(0.445001, 0.228169, 0.218341, 1)
+planetColor = Color(0.266282, 0.304064, 0.35509, 1)
